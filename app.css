@@ -5,6 +5,9 @@
 }
 
 /* Reset */
+* {
+  box-sizing: border-box;
+}
 body,
 p,
 h1 {
@@ -16,7 +19,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 1.2rem;
+  justify-content: space-between;
+  padding: 1.2rem;
 }
 
 header p {
@@ -30,7 +34,6 @@ header p {
 main {
   font-family: "Space Mono", monospace;
   letter-spacing: -0.035em;
-  flex: 1 0 auto;
   margin: 1.2rem 0 3rem 0;
 }
 
@@ -86,16 +89,10 @@ footer p span {
 }
 
 @media (min-width: 900px) {
-  body {
-    justify-content: space-between;
-  }
-
   main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-grow: 0;
-    max-width: 1800px;
     align-self: center;
   }
 
