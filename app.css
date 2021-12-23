@@ -12,6 +12,13 @@ h1 {
 }
 
 /* Styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 1.2rem;
+}
+
 header p {
   font-family: "Inconsolata", monospace;
   font-size: 24px;
@@ -23,24 +30,32 @@ header p {
 main {
   font-family: "Space Mono", monospace;
   letter-spacing: -0.035em;
+  flex: 1 0 auto;
+  margin: 1.2rem 0 3rem 0;
+}
+
+main div:first-of-type {
+  margin-bottom: 1.2rem;
 }
 
 main img {
-  max-width: 80%;
+  display: block;
+  max-width: 270px;
+  margin: 0 auto;
 }
 
 main h1 {
   font-weight: 700;
   font-size: 48px;
   color: var(--gray-1);
-  max-width: 15ch;
+  margin-bottom: 1.2rem;
 }
 
 main p {
   font-weight: 400;
   font-size: 18px;
   color: var(--gray-2);
-  max-width: 26ch;
+  margin-bottom: 2.4rem;
 }
 
 main a {
@@ -68,4 +83,37 @@ footer p {
 footer p span {
   font-weight: 700;
   text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  body {
+    justify-content: space-between;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 0;
+    max-width: 1800px;
+    align-self: center;
+  }
+
+  main div:last-of-type {
+    margin-left: 5rem;
+  }
+
+  main img {
+    max-width: 539.22px;
+  }
+
+  main h1 {
+    font-size: 64px;
+    max-width: 15ch;
+  }
+
+  main p {
+    font-size: 24px;
+    max-width: 26ch;
+  }
 }
